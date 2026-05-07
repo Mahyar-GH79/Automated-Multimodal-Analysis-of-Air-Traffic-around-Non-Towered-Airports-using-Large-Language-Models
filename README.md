@@ -51,7 +51,7 @@ The CTAF-KHAF-Synthetic benchmark (100 scenarios) is **not stored in
 this repository**. The audio files and per-scenario directories are
 hosted on Google Drive:
 
-> **Download CTAF-KHAF-Synthetic:** `<[Here](https://drive.google.com/drive/folders/1ehX4EBxHLhKgYR58MC2kbVj1_KvGyjn5?usp=sharing)>`
+> **Download CTAF-KHAF-Synthetic:** `<(https://drive.google.com/drive/folders/1ehX4EBxHLhKgYR58MC2kbVj1_KvGyjn5?usp=sharing)>`
 
 After downloading, unpack so that the directory layout becomes:
 
