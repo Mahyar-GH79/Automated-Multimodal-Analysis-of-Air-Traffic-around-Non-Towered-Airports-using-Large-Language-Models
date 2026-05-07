@@ -158,24 +158,4 @@ python make_paper_assets.py
 - Closed-source models (GPT-4o, GPT-5.4, Claude Sonnet 4.6) are
   accessed through their respective HTTP APIs.
 
-## Citation
 
-If you use this code or dataset, please cite the paper:
-
-```bibtex
-@inproceedings{darrell2026ctafvlm,
-  title     = {Automated Multimodal Analysis of Air Traffic around
-               Non-Towered Airports using Vision-Language Models},
-  author    = {Darrell, Torsten and Ghazanfari, Mahyar and Kam, Jordan
-               and Bayen, Alexandre and Tabrizian, Amin and Vu, Dao
-               and Wei, Peng},
-  booktitle = {AIAA SCITECH Forum},
-  year      = {2026}
-}
-```
-
-## License
-
-Code released under the MIT License. The CTAF-KHAF-Synthetic dataset
-is released for non-commercial research use; see `dataset/LICENSE`
-in the Drive download for full terms.
