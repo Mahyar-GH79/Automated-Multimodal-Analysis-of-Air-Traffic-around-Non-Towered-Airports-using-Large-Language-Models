@@ -1,0 +1,38 @@
+\begin{table}[ht]
+\centering
+\caption{Per-class F$_1$ scores on the three-class CTAF-KHAF benchmark across all models, prompting strategies, and reasoning methods. Best per (model, class) row in \textbf{bold}.}
+\label{tab:perclass_3class}
+\renewcommand{\arraystretch}{1.10}
+\small
+\begin{tabular}{l l l *{6}{c}}
+\toprule
+ & & & \multicolumn{3}{c}{Direct prompting} & \multicolumn{3}{c}{Chain-of-thought} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+Source & Model & Class & ZS & OS & FS & ZS & OS & FS \\
+\midrule
+  \multirow{9}{*}{\textit{Open-source}} & \multirow{3}{*}{Qwen 2.5-7B} & Nominal & 0.828 & 0.857 & 0.756 & 0.512 & 0.852 & \textbf{0.968} \\
+   &  & Warning & 0.545 & 0.469 & 0.269 & 0.569 & 0.613 & \textbf{0.709} \\
+   &  & Hazard & \textbf{0.688} & 0.519 & 0.519 & 0.167 & 0.610 & 0.553 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Mistral-7B} & Nominal & 0.827 & 0.805 & 0.861 & 0.488 & 0.899 & \textbf{0.921} \\
+   &  & Warning & 0.400 & 0.200 & 0.356 & 0.561 & 0.614 & \textbf{0.638} \\
+   &  & Hazard & 0.453 & \textbf{0.704} & \textbf{0.704} & 0.121 & 0.000 & 0.000 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Gemma-2-9B} & Nominal & \textbf{0.939} & 0.769 & 0.909 & 0.591 & 0.769 & 0.852 \\
+   &  & Warning & 0.508 & 0.475 & 0.489 & \textbf{0.561} & 0.431 & 0.516 \\
+   &  & Hazard & 0.542 & 0.753 & \textbf{0.779} & 0.216 & 0.648 & 0.694 \\
+\midrule
+  \multirow{9}{*}{\textit{Closed-source}} & \multirow{3}{*}{GPT-4o} & Nominal & 0.899 & 0.899 & 0.899 & 0.968 & 0.915 & \textbf{0.969} \\
+   &  & Warning & 0.667 & 0.618 & 0.655 & 0.694 & 0.687 & \textbf{0.733} \\
+   &  & Hazard & 0.806 & 0.781 & \textbf{0.812} & 0.630 & 0.742 & 0.781 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{GPT-5.4} & Nominal & 0.836 & \textbf{0.900} & 0.842 & 0.792 & 0.897 & 0.871 \\
+   &  & Warning & 0.696 & \textbf{0.730} & \textbf{0.730} & 0.636 & 0.712 & 0.607 \\
+   &  & Hazard & 0.812 & 0.831 & \textbf{0.882} & 0.812 & 0.817 & 0.800 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Claude Sonnet 4.6} & Nominal & 0.833 & 0.825 & 0.886 & 0.899 & 0.862 & \textbf{0.923} \\
+   &  & Warning & 0.714 & 0.536 & 0.400 & 0.644 & 0.621 & \textbf{0.733} \\
+   &  & Hazard & \textbf{0.828} & 0.783 & 0.740 & 0.767 & 0.800 & 0.825 \\
+\bottomrule
+\end{tabular}
+\end{table}

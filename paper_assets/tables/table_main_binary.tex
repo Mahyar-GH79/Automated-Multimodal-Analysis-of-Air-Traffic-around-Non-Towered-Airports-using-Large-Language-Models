@@ -1,0 +1,38 @@
+\begin{table}[ht]
+\centering
+\caption{Binary classification results (Nominal vs.\ Danger) on the CTAF-KHAF benchmark. Best per (model, metric) row in \textbf{bold}. AUROC is computed against the danger class using token logprobs where available, with self-reported confidence as a fallback for models whose API does not expose logprobs.}
+\label{tab:main_binary}
+\renewcommand{\arraystretch}{1.10}
+\small
+\begin{tabular}{l l l *{6}{c}}
+\toprule
+ & & & \multicolumn{3}{c}{Direct prompting} & \multicolumn{3}{c}{Chain-of-thought} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+Source & Model & Metric & ZS & OS & FS & ZS & OS & FS \\
+\midrule
+  \multirow{9}{*}{\textit{Open-source}} & \multirow{3}{*}{Qwen 2.5-7B} & Macro-F$_1$ & \textbf{0.964} & 0.876 & 0.825 & 0.700 & \textbf{0.964} & 0.919 \\
+   &  & Accuracy & \textbf{0.968} & 0.883 & 0.830 & 0.766 & \textbf{0.968} & 0.926 \\
+   &  & AUROC & \textbf{0.994} & 0.982 & 0.982 & 0.989 & 0.977 & 0.983 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Mistral-7B} & Macro-F$_1$ & 0.856 & 0.825 & 0.877 & \textbf{0.898} & 0.332 & 0.300 \\
+   &  & Accuracy & 0.862 & 0.830 & 0.883 & \textbf{0.904} & 0.383 & 0.362 \\
+   &  & AUROC & 0.974 & 0.982 & 0.984 & 0.978 & 0.987 & \textbf{0.988} \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Gemma-2-9B} & Macro-F$_1$ & 0.898 & \textbf{0.931} & 0.920 & 0.877 & 0.876 & 0.920 \\
+   &  & Accuracy & 0.904 & \textbf{0.936} & 0.926 & 0.883 & 0.883 & 0.926 \\
+   &  & AUROC & \textbf{0.992} & 0.991 & \textbf{0.992} & \textbf{0.992} & 0.990 & 0.986 \\
+\midrule
+  \multirow{9}{*}{\textit{Closed-source}} & \multirow{3}{*}{GPT-4o} & Macro-F$_1$ & 0.787 & 0.900 & 0.907 & \textbf{0.931} & \textbf{0.931} & 0.909 \\
+   &  & Accuracy & 0.840 & 0.915 & 0.915 & \textbf{0.936} & \textbf{0.936} & 0.915 \\
+   &  & AUROC & \textbf{0.991} & 0.983 & 0.976 & 0.977 & 0.988 & 0.978 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{GPT-5.4} & Macro-F$_1$ & 0.672 & 0.852 & 0.776 & 0.672 & \textbf{0.867} & 0.776 \\
+   &  & Accuracy & 0.777 & 0.883 & 0.830 & 0.777 & \textbf{0.894} & 0.830 \\
+   &  & AUROC & 0.902 & 0.935 & 0.924 & 0.935 & \textbf{0.952} & 0.915 \\
+\cmidrule(lr){2-9}
+   & \multirow{3}{*}{Claude Sonnet 4.6} & Macro-F$_1$ & 0.804 & 0.844 & 0.889 & 0.864 & 0.898 & \textbf{0.952} \\
+   &  & Accuracy & 0.830 & 0.872 & 0.904 & 0.883 & 0.915 & \textbf{0.957} \\
+   &  & AUROC & 0.937 & 0.974 & 0.964 & 0.961 & 0.982 & \textbf{0.994} \\
+\bottomrule
+\end{tabular}
+\end{table}

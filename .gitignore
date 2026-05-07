@@ -1,0 +1,68 @@
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Python build/cache artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Claude Code / Claude harness
+.claude/
+
+# Datasets and large run artifacts (download separately, see README)
+dataset/scenarios/
+dataset/ctaf_khaf_synthetic_v2.json
+dataset/ctaf_khaf_v3.json
+results/
+results_binary/
+
+# Logs and stdout dumps
+*.log
+overnight.out
+*.out
+
+# Backup files
+*.bak
+*~
+*.cleaned
+
+# Secrets
+.env
+.env.*
+*.key
+secrets.json
+
+# Notebooks
+.ipynb_checkpoints/
+
+# matplotlib
+*.cache

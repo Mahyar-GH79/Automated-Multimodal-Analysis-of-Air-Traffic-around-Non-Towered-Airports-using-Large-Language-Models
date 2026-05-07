@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\centering
+\caption{Three-class classification results (Nominal / Warning / Hazard) on the CTAF-KHAF benchmark. Best per (model, metric) row in \textbf{bold}.}
+\label{tab:main_3class}
+\renewcommand{\arraystretch}{1.10}
+\small
+\begin{tabular}{l l l *{6}{c}}
+\toprule
+ & & & \multicolumn{3}{c}{Direct prompting} & \multicolumn{3}{c}{Chain-of-thought} \\
+\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+Source & Model & Metric & ZS & OS & FS & ZS & OS & FS \\
+\midrule
+  \multirow{6}{*}{\textit{Open-source}} & \multirow{2}{*}{Qwen 2.5-7B} & Macro-F$_1$ & 0.687 & 0.615 & 0.515 & 0.416 & 0.692 & \textbf{0.743} \\
+   &  & Accuracy & 0.681 & 0.628 & 0.553 & 0.479 & 0.681 & \textbf{0.755} \\
+\cmidrule(lr){2-9}
+   & \multirow{2}{*}{Mistral-7B} & Macro-F$_1$ & 0.560 & 0.570 & \textbf{0.640} & 0.390 & 0.504 & 0.520 \\
+   &  & Accuracy & 0.585 & 0.638 & \textbf{0.681} & 0.468 & 0.617 & 0.628 \\
+\cmidrule(lr){2-9}
+   & \multirow{2}{*}{Gemma-2-9B} & Macro-F$_1$ & 0.663 & 0.666 & \textbf{0.726} & 0.456 & 0.616 & 0.687 \\
+   &  & Accuracy & 0.670 & 0.670 & \textbf{0.755} & 0.500 & 0.606 & 0.681 \\
+\midrule
+  \multirow{6}{*}{\textit{Closed-source}} & \multirow{2}{*}{GPT-4o} & Macro-F$_1$ & 0.791 & 0.766 & 0.789 & 0.764 & 0.781 & \textbf{0.828} \\
+   &  & Accuracy & 0.798 & 0.777 & 0.798 & 0.766 & 0.777 & \textbf{0.830} \\
+\cmidrule(lr){2-9}
+   & \multirow{2}{*}{GPT-5.4} & Macro-F$_1$ & 0.782 & \textbf{0.820} & 0.818 & 0.747 & 0.808 & 0.759 \\
+   &  & Accuracy & 0.777 & \textbf{0.819} & \textbf{0.819} & 0.745 & 0.809 & 0.766 \\
+\cmidrule(lr){2-9}
+   & \multirow{2}{*}{Claude Sonnet 4.6} & Macro-F$_1$ & 0.792 & 0.715 & 0.675 & 0.770 & 0.761 & \textbf{0.827} \\
+   &  & Accuracy & 0.787 & 0.723 & 0.713 & 0.777 & 0.766 & \textbf{0.830} \\
+\bottomrule
+\end{tabular}
+\end{table}
