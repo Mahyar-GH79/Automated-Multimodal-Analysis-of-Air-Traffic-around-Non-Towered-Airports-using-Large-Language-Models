@@ -1,4 +1,4 @@
-# Automated Multimodal Analysis of Air Traffic around Non-Towered Airports using Vision-Language Models
+# Automated Multimodal Analysis of Air Traffic around Non-Towered Airports using Large-Language Models
 
 Code, dataset, and paper assets for the AIAA submission *Automated
 Multimodal Analysis of Air Traffic around Non-Towered Airports using
