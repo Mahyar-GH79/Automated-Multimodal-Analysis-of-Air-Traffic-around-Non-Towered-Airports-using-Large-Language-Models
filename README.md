@@ -2,8 +2,7 @@
 
 Code, dataset, and paper assets for the AIAA submission *Automated
 Multimodal Analysis of Air Traffic around Non-Towered Airports using
-Vision-Language Models* (Darrell, Ghazanfari, Kam, Bayen, Tabrizian,
-Vu, Wei).
+Vision-Language Models
 
 The system is a **vision-language-model (VLM) based safety advisor**
 for non-towered airports. It ingests a transcribed CTAF radio session,
