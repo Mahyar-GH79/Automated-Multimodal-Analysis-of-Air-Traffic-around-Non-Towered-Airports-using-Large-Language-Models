@@ -72,7 +72,6 @@ Each scenario record in `ctaf_khaf_synthetic_v2.json` carries:
 - a hazard-type label drawn from a 12-category taxonomy,
 - raw and decoded METAR text,
 - a CTAF radio transcript in SRT format with timestamps,
-- per-aircraft ADS-B state vectors,
 - a path to the synthesized multi-voice audio (`audio.mp3`).
 
 The audio is generated from the transcripts using OpenAI's TTS-1-HD,
